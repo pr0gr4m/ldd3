@@ -90,7 +90,7 @@ static int simple_remap_mmap(struct file *filp, struct vm_area_struct *vma)
 /*
  * The nopage version.
  */
-static int simple_vma_nopage(struct vm_fault *vmf)
+static vm_fault_t simple_vma_nopage(struct vm_fault *vmf)
 {
 	struct page *pageptr;
 	struct vm_area_struct *vma = vmf->vma;
